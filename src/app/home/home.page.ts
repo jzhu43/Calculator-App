@@ -23,10 +23,12 @@ export class HomePage {
         this.firstval = null;
         this.operator = null;
         this.newcursor = false;
+        this.iscomma = false;
         break;
       case 'c':
         this.display = '0';
         this.isc = false;
+        this.iscomma = false;
         break;
       case '+/-':
         if(Math.sign(parseInt(this.display, 0)) === 1){
@@ -92,7 +94,7 @@ export class HomePage {
       case '9':
         this.addnumber('9');
         break;
-      case ',':
+      case '.':
         this.addcomma();
         break;
     }
